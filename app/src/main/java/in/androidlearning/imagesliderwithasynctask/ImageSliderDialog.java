@@ -54,8 +54,8 @@ public class ImageSliderDialog extends Dialog {
 
         @Override
         protected Integer doInBackground(Integer... integers) {
-
-            for (int i = 0; i < images.length; i++) {
+            int i;
+            for (i = 0; i < images.length; i++) {
                 publishProgress(i);
                     try {
                         Thread.sleep(1000);
@@ -64,7 +64,7 @@ public class ImageSliderDialog extends Dialog {
                     }
 
             }
-            return doInBackground();
+            return i;
         }
 
         @Override
